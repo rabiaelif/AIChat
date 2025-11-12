@@ -39,28 +39,27 @@ Backend
  Projeyi Yerel Olarak Kurulum
 1 Backend Kurulumu (.NET Core)
 
-# Proje dizinine gidin
+- Proje dizinine gidin
 cd Backend
 
-# Gerekli paketleri yükleyin
+- Gerekli paketleri yükleyin
 dotnet restore
 
-# Veritabanını oluşturun
+- Veritabanını oluşturun
 dotnet tool install --global dotnet-ef
 dotnet ef database update
 
-# Uygulamayı çalıştırın
+- Uygulamayı çalıştırın
 dotnet run
-
 
 Not: Backend Render üzerinde barındırıldığı için yerelde çalıştırmak zorunlu değildir, ancak debug etmek isterseniz bu adımlar gereklidir.
 
 2 Frontend Kurulumu (React)
 
-# Frontend klasörüne gidin
+- Frontend klasörüne gidin
 cd frontend
 
-# Bağımlılıkları yükleyin
+- Bağımlılıkları yükleyin
 npm install
 
 
