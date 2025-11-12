@@ -66,5 +66,9 @@ app.MapPost("/huggingface", async ([FromBody] Message message, AppDbContext db) 
 });
 
 app.MapGet("/messages", async (AppDbContext db) => await db.Messages.ToListAsync());
-
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 app.Run();
