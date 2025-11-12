@@ -1,4 +1,0 @@
-POST http://localhost:5145/huggingface
-Content-Type: application/json
-
-"Bugün çok mutluyummmm."
