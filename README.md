@@ -1,8 +1,13 @@
-ChatMood: Duygu Analizli Gerçek Zamanlı Sohbet Uygulaması
+# ChatMood: Duygu Analizli Gerçek Zamanlı Sohbet Uygulaması
 
 Bu proje, React (Frontend) ve .NET Core (Backend) teknolojileriyle geliştirilmiş, mesajların gönderilmeden önce Hugging Face API aracılığıyla duygu analizinden geçirildiği basit bir gerçek zamanlı sohbet arayüzüdür.
 
-Özellikler
+##  Canlı Bağlantılar
+
+-  **Frontend (Vercel):** [https://ai-chat-dusky-eight.vercel.app](https://ai-chat-dusky-eight.vercel.app)  
+-  **Backend (Render):** [https://aichat-backend-gvor.onrender.com](https://aichat-backend-gvor.onrender.com)
+
+## Özellikler
 
 Gerçek Zamanlı Sohbet: İki kullanıcı (Ceren ve Selim) arasında mesajlaşma.
 
@@ -14,9 +19,9 @@ Duygu İstatistikleri: Yan panelde anlık sohbetin duygusal dağılımını gös
 
 Modern Teknolojiler: React Hooks, TailwindCSS ile duyarlı (responsive) tasarım, ASP.NET Core Web API ve SQLite veritabanı.
 
-Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 
-Frontend
+### Frontend
 
 React
 
@@ -26,7 +31,7 @@ Axios / Fetch API
 
 Vercel (Frontend Hosting)
 
-Backend
+### Backend
 
  .NET Core 9 Web API
 
@@ -36,48 +41,50 @@ Backend
 
  Hugging Face API (Duygu Analizi Servisi)
 
- Projeyi Yerel Olarak Kurulum
-1 Backend Kurulumu (.NET Core)
-
-- Proje dizinine gidin
+## Projeyi Yerel Olarak Kurulum
+### Backend Kurulumu (.NET Core)
+```bash
+(# Proje dizinine gidin
 cd Backend
 
-- Gerekli paketleri yükleyin
+# Gerekli paketleri yükleyin
 dotnet restore
 
-- Veritabanını oluşturun
+# Veritabanını oluşturun
 dotnet tool install --global dotnet-ef
 dotnet ef database update
 
-- Uygulamayı çalıştırın
+# Uygulamayı çalıştırın
 dotnet run
-
+```
 Not: Backend Render üzerinde barındırıldığı için yerelde çalıştırmak zorunlu değildir, ancak debug etmek isterseniz bu adımlar gereklidir.
 
-2 Frontend Kurulumu (React)
+### Frontend Kurulumu (React)
+```bash
 
-- Frontend klasörüne gidin
+Frontend klasörüne gidin
 cd frontend
 
-- Bağımlılıkları yükleyin
+Bağımlılıkları yükleyin
 npm install
 
-
+```
 src/App.jsx dosyasındaki API_BASE_URL değişkeninin doğru adrese işaret ettiğinden emin olun:
 
 const API_BASE_URL = "https://aichat-backend-gvor.onrender.com";
 
 
 Ardından uygulamayı başlatın:
+```bash
 
 npm run dev
-
+```
 
 Tarayıcı otomatik olarak http://localhost:5173/ adresinde açılacaktır.
 
-API Entegrasyonu
+### API Entegrasyonu
 
-Duygu analizi backend tarafından şu akışta yönetilir:
+## Duygu analizi backend tarafından şu akışta yönetilir:
 
 Frontend mesajı (text) backend'e gönderir.
 
@@ -91,18 +98,11 @@ Mesaj verisi sentiment sonucu ile birlikte frontend’e geri gönderilir.
 
 Bu sayede her mesaj hem saklanır hem analiz edilir hem de kullanıcıya anlık olarak gösterilir.
 
-Kullanım Notları
-
-Kullanıcı Geçişi: Soldaki Sidebar veya mobilde Navbar’daki kişi ikonu üzerinden Ceren veya Selim olarak geçiş yapabilirsiniz.
+## Kullanıcı Geçişi: 
+Ceren veya Selim olarak geçiş yapabilirsiniz.
 Yalnızca seçilen kullanıcının ve karşı tarafın mesajları görünür.
 Farklı kullanıcıya geçiş yaptığınızda, aynı sohbet geçmişi karşı tarafın bakış açısından görüntülenir.
 Bu sayede sohbet akışı değişmez, sadece “konuşmacı perspektifi” değişir.
 
 NOT: Render Backend 15 dakika hareketsiz kalırsa “sleep mode”a geçer.
 İlk istekte 15–30 saniye kadar bekleyin veya sayfayı yenileyin.
-
-Canlı Bağlantılar
-
-Frontend	Vercel	https://ai-chat-dusky-eight.vercel.app
-
-Backend	Render	https://aichat-backend-gvor.onrender.com
