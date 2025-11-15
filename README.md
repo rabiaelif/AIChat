@@ -5,7 +5,7 @@ Bu proje, React (Frontend) ve .NET Core (Backend) teknolojileriyle geliştirilmi
 ##  Canlı Bağlantılar
 
 -  **Frontend (Vercel):** [https://ai-chat-dusky-eight.vercel.app](https://ai-chat-dusky-eight.vercel.app)  
--  **Backend (Render):** [https://aichat-backend-gvor.onrender.com](https://aichat-backend-gvor.onrender.com)
+-  **Backend (Render):** [[https://aichat-backend-gvor.onrender.com/messages](https://aichat-backend-gvor.onrender.com/messages)
 
 ## Özellikler
 
